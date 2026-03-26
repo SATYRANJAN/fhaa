@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, rgb(119, 119, 224), rgb(16, 60, 180));
+
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 7);
+            font-weight: 600;
+            font-family: cursive;
+        }
+
+        .contain {
+
+
+            position: absolute;
+            backdrop-filter: blur(30px);
+            background: burlywood;
+            height: 400px;
+            width: 300px;
+            margin: 30px 450px;
+            padding: 70px 80px;
+            border-radius: 10px;
+            border: 1px solid rgb(173, 168, 159);
+            box-shadow: 5px 5px 5px 15px black;
+
+
+        }
+
+        .contain input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0px;
+            border: 2px solid white;
+            border-radius: 20px;
+            color: rgb(0, 0, 0);
+            background: none;
+            padding: 9px;
+            margin-top: 10px;
+            width: 270px;
+            height: 40px;
+            font-family: fantasy;
+        }
+
+        input::placeholder {
+            color: black;
+        }
+
+        .contain button {
+            position: relative;
+            margin: 40px 80px;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 20px;
+            background-color: white;
+            font-family: monospace;
+            font-weight: 600;
+            font-size: 15px;
+
+
+        }
+
+        .contain h2 {
+            font-size: 20px;
+            margin: 0px 50px;
+            font-weight: 600;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 2px solid white;
+            border-radius: 15px;
+            height: 50px;
+            width: 150px;
+            padding: 20px;
+
+        }
+
+        @media(max-width:320px) {
+            h1 {
+                margin-top: 20px;
+            }
+
+            .contain {
+                height: 400px;
+                width: 300px;
+                margin: 0;
+                padding: 0px;
+            }
+
+            .contain input {
+                margin-left: 35px;
+                padding: 9px;
+                margin-top: 10px;
+                width: 200px;
+                height: 40px;
+
+            }
+
+            .contain button {
+                margin: 20px 80px;
+                padding: 15px 40px;
+            }
+
+
+
+            .contain h2 {
+                margin: 5px 50px;
+                height: 50px;
+                width: 150px;
+                padding: 5px;
+
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contain">
+        <h1>Fhaa</h1>
+        <div class="1">
+            <input id="Name" type="text" placeholder="Enter Name">
+        </div>
+        <div class="2">
+            <input id="person" type="text" placeholder="What Person says?">
+            <button id="speak">Speak</button>
+            <h2 id="result"></h2>
+        </div>
+    </div>
+
+
+    <script>
+        let name = document.getElementById("Name");
+        let say = document.getElementById("person");
+        let button = document.getElementById("speak")
+        let result = document.getElementById("result")
+
+
+
+        button.addEventListener("click", function () {
+
+            let a = name.value;
+            let b = say.value;
+
+
+            if (a === "") {
+                alert("FilL Name of person...")
+                return;
+
+            }
+            else if (b === "") {
+                alert("Mention, what oppenent  says ?")
+                return;
+            }
+            result.innerText = a + "🗣️:" + b;
+
+
+            name.value = "";
+            say.value = "";
+        })
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
